@@ -1,6 +1,6 @@
 var x = 0;
-function scopeDemo() {
-    console.log(x)
+function scopeDemo(a) {
+    console.log(x);
     let a = 3, b = 4, c = 5;
     console.log(a);
     console.log(b);
