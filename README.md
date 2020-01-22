@@ -8,7 +8,3 @@ The *ice* folder contains in-class exercises.
 
 ## About Me
 This should be replaced.
-<<<<<<< HEAD
-
-=======
->>>>>>> refs/remotes/origin/master
