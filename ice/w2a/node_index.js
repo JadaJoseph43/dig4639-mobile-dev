@@ -8,4 +8,3 @@ x = x*3;
 var z = addOne(x)+10;
 console.log(y);
 console.log(0);
-
