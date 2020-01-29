@@ -1,0 +1,24 @@
+body {
+
+    background-color:#d5e7e3;
+    margin-left: 90px;
+    margin-right: 90px;
+    text-align: center;
+    
+}
+
+h1{
+    font-family: sans-serif;
+    color: #37468d;
+    font-size: 90px;
+}
+
+p{
+    color: #8d2289;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 30px;
+    
+}
+.ArticleAuhtor{
+    font-size: 80px;
+}
