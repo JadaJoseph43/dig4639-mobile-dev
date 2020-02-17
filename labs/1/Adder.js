@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 class Adder {
 
     props;
@@ -27,3 +28,20 @@ return this.props.a + this.props.b;
 
 
 module.exports = Adder;
+=======
+class Adder {
+    props;
+    constructor(props){
+this.props = props;
+    }
+    sum(){
+return this.props.a + this.props.b;
+    }
+    render(){
+        
+        return `<p>The sum of ${this.props.a} and ${this.props.b} is 15</p>`;
+    }
+}
+
+module.exports = Adder;
+>>>>>>> 8d059f09ba97a004c86d48f2fb4bcaa976e5801b

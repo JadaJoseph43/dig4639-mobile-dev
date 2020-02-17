@@ -1,3 +1,4 @@
+<<<<<<< HEAD
   
   
 {
@@ -12,3 +13,18 @@
     "author": "",
     "license": "ISC"
   }
+=======
+  
+{
+  "name": "1",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
+>>>>>>> 8d059f09ba97a004c86d48f2fb4bcaa976e5801b
