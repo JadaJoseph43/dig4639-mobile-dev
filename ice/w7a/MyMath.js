@@ -13,7 +13,14 @@ export function Sum (a, b) {
 }
 
 export function AddList(list) {
-  return 0;
+  var result = 0;
+  //for(var mem of list) {
+}
+  for(var i = 0; i < list.lenght; i++) {
+    result = result + list[i];
+
+  }
+  return result;
 
 
 }

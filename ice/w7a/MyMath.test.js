@@ -6,9 +6,11 @@ describe('Testing AddList', () => {
   let list = [1,2,3,4];
   let result = AddList(list);
   expect(result).toBe(0);
+  list =[1,2,3,4,100,10000]
+  expect(result).toBe(1010);
   })
-})
-
+it('emebr of list is undefined', () => 
+{
 
 describe('Testing Sum', () => {
   it('Adds a string and a number and get undefined', () => {
