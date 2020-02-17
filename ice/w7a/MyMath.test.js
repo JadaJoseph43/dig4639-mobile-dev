@@ -1,10 +1,19 @@
-import { Sum, AddList } from './MyMath.js'
+import { Sum, AddList, DivideBy } from './MyMath.js'
 
 describe('Testing AddList', () => {
   it('Return the sum of a list of numbers', () =>
   {
   let list = [1,2,3,4];
   let result = AddList(list);
+  expect(result).toBe(0);
+  })
+})
+
+describe('Testing DivideBy', () => {
+  it('Return the sum of a list of numbers', () =>
+  {
+  let divide = [1,2,3,4];
+  let result = DivideBy(divide);
   expect(result).toBe(0);
   })
 })
