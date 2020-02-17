@@ -9,14 +9,6 @@ describe('Testing AddList', () => {
   })
 })
 
-describe('Testing DivideBy', () => {
-  it('Return the sum of a list of numbers', () =>
-  {
-  let divide = [1,2,3,4];
-  let result = DivideBy(divide);
-  expect(result).toBe(0);
-  })
-})
 
 describe('Testing Sum', () => {
   it('Adds a string and a number and get undefined', () => {

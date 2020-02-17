@@ -15,9 +15,7 @@ export function Sum (a, b) {
 export function AddList(list) {
   return 0;
 
-}
-export function DivideBy(divide) {
-  return 0;
+
 }
 
 let op1 = "Ten";
