@@ -51,4 +51,4 @@ test('zero', () => {
   expect(z).not.toBeUndefined()
   expect(z).not.toBeTruthy()
   expect(z).toBeFalsy()
-}
+})
