@@ -1,0 +1,72 @@
+[
+    {
+      "question": "1. What did ancient people consider the rabbit a symbol of?",
+      "possibleAnswers":
+      [
+        {"text":"Bad luck",
+        "correct":false },
+        {"text":"Good luck",
+        "correct":false },
+        {"text":"Fertility",
+        "correct":true },
+        {"text":"Fortune",
+        "correct":false }
+      ]
+    },
+    {
+      "question": "2. How do rabbits live?",
+      "possibleAnswers":
+      [
+        {"text":"Alone",
+        "correct":false },
+        {"text":"Pairs",
+        "correct":false },
+        {"text":"None of the above",
+        "correct":false },
+        {"text":"Groups",
+        "correct":true }
+      ]
+    },
+    {
+      "question": "3. How do hares live?",
+      "possibleAnswers":
+      [
+        {"text":"Groups",
+        "correct":false },
+        {"text":"Alone",
+        "correct":true },
+        {"text":"Pairs",
+        "correct":false },
+        {"text":"All of the above",
+        "correct":false }
+      ]
+    },
+    {
+      "question": "4. How can you tell a Rabbit feels endangered?",
+      "possibleAnswers":
+      [
+        {"text":"Ears are pressed back",
+        "correct":true },
+        {"text":"Ears turn red",
+        "correct":false },
+        {"text":"Ears are raised up",
+        "correct":false },
+        {"text":"None of the above",
+        "correct":false }
+      ]
+    },
+    {
+      "question": "5. How can a rabbit communicate that danger is near?",
+      "possibleAnswers":
+      [
+        {"text":"Raises its ears",
+        "correct":false },
+        {"text":"Runs and jumps",
+        "correct":false },
+        {"text":"Makes a sound",
+        "correct":false },
+        {"text":"Thumps the ground",
+        "correct":true }
+      ]
+    }
+  ]
