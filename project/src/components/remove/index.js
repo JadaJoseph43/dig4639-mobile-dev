@@ -21,7 +21,7 @@ class Remove extends Component {
       },
       "body": JSON.stringify({
         "name": "",
-        "number": ""
+        "number": 0
       })
     })
     .then(response => response.json() )

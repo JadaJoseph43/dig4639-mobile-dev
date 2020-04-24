@@ -20,8 +20,8 @@ class Add extends Component {
         "Accept": "application/json"
       },
       "body": JSON.stringify({
-        "name": "{}",
-        "number": "[]"
+        "name": "",
+        "number": 0
       })
     })
     .then(response => response.json() )
