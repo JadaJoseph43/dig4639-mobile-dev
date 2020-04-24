@@ -1,13 +1,18 @@
-  
 import React from 'react';
-import ContactApp from './components';
+import Add from "./components/newContact/index.js";
+import Contacts from "./components/contacts/index.js";
+import Remove from "./components/remove/index.js";
+import Profile from "./components/profile/index.js";
+import './App.css';
 
-class App extends React.Component {
-  render() {
-    return (
-        <ContactApp />
-    );
-  }
+function App() {
+  return (
+    <div className="Contacts">
+    <Contacts/>
+    <Add/>
+  
+    </div>
+  );
 }
 
 export default App;
