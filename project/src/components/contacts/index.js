@@ -1,37 +1,36 @@
-import React, { useState, useEffect } from 'react'
-import "./index.css"
-import NewContact from "../newContact";
-import Remove from "../Remove";
+import React from 'react';
+import './index.css';
 
-const Contacts = () => {
-  const [contacts, setContacts] = useState([]);
+class Contacts extends React.Component {
 
-  const loadAgain = async () => {
-    console.log("loadAgain")
-    try {
-      const res = await fetch("http://plato.mrl.ai:8080/contacts", {
-        "method": "GET",
-        "headers": {
-          "api": "dharmakirthi"
-        }
-      })
-      const data = await res.json()
-      setContacts(data.contacts)
-    } catch (error) {
-      console.log(error)
-    }
+  constructor(props) {
+    super(props);
+
+    this.state = {contacts: []};
+
   }
 
-  useEffect(() => {
-    loadAgain()
-  }, [])
+  componentDidMount() {
 
-  return (
-    <React.Fragment>
-      <NewContact loadAgain={loadAgain} />
-      <Remove contacts={contacts} loadAgain={loadAgain} />
-    </React.Fragment>
-  )
-};
+    window.fetch("http://plato.mrl.ai:8080/contacts", {headers: {API: "joseph "}})
+    .then((res) => res.json())
+    .then((data) => {
+      this.setState({contacts: data.contacts});
+    });
+
+  }
+
+  render() {
+    return (
+      <div>
+       {
+         this.state.contacts.map((value, index) => {
+           return <h3 key={index}>Name:{value.name} Number:({value.number})</h3>;
+         })
+       }
+      </div>
+    );
+  }
+}
 
 export default Contacts;

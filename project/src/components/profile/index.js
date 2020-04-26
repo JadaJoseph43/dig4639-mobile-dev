@@ -1,32 +1,48 @@
-import "./index.css"
-import React, { useState, useEffect } from 'react'
+import React from 'react';
+import './index.css';
 
-function Profile() {
-    const [profile, setProfile] = useState([]);
+class Profile extends React.Component {
 
-    const getProfile = () => {
-        window.fetch("http://plato.mrl.ai:8080/profile", {
-            "method": "GET",
-            "headers": { "api": "dharmakirthi" }
-        })
-            .then(res => res.json())
-            .then((data) => {
-                setProfile(data)
-            })
-            .catch(console.log)
-    }
+  constructor(props) {
+    super(props);
 
-    useEffect(() => {
-        getProfile()
-    }, [])
+    this.state = {profile: []};
 
+  }
+
+  componentDidMount() {
+
+    window.fetch("http://plato.mrl.ai:8080/profile", {
+      "method": "GET",
+      "headers": {
+        "api": "joseph",
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      "body": JSON.stringify({
+        "name": "",
+        "number": 0
+      })
+    })
+    .then(response => response.json() )
+    .then((data) => this.setState({profile: data.profile}) )
+    .catch(err => {
+      console.log(err);
+    });
+
+  }
+
+  render() {
     return (
-        <div className="profile-title">
-            <div>
-                <h2>Profile: {profile.name} - Has {profile.count} Contacts</h2>
-            </div>
-        </div>
-    )
-};
+      <div>
+        <h2>Added</h2>
+
+        <p>{this.state.profile.name}</p>
+        <p>{this.state.profile.number}</p>
+
+      </div>
+    );
+  }
+}
 
 export default Profile;

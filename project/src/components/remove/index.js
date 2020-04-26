@@ -1,52 +1,46 @@
-import React from "react";
+import React, { Component } from 'react';
+import './index.css';
 
-const RemoveContact = ({ contacts, loadAgain }) => {
-  
-  const contactDelete = async (person) => {
-    console.log("contactDelete")
-    const contactIndex = contacts
-      .findIndex(contact => {
-        return contact.name === person.name && contact.number === person.number;
-      });
-    try {
-      await window.fetch("http://plato.mrl.ai:8080/contacts/remove", {
-        method: "POST",
-        headers: {
-          api: "dharmakirthi",
-          "Content-Type": "application/json",
-          Accept: "application/json"
-        },
-        body: JSON.stringify({
-          position: contactIndex
-        })
-      })
-      loadAgain()
-    } catch (error) {
-      console.log(error)
-    }
+class Remove extends Component {
+
+  constructor(props) {
+    super(props);
+
+    this.state = {remove: {}};
+
   }
 
-  return (
-    <div className="contacts">
-      {contacts.map((contact, index) => (
-        <div key={index}>
-          <table>
-            <tbody>
-              <tr className="border_bottom">
-                <td className="colored">Name:</td>
-                <td>{contact.name}</td>
-                <td className="colored">Number:</td>
-                <td>{contact.number}</td>
-                <td>
-                  <button onClick={() => contactDelete(contact)} className="delete">x</button>
-                </td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      ))}
-    </div>
-  );
+  componentDidMount() {
+
+    fetch("http://plato.mrl.ai:8080/contacts/remove", {
+      "method": "POST",
+      "headers": {
+        "api": "josephs",
+        "Content-Type": "application/json",
+        "Accept": "application/json"
+      },
+      "body": JSON.stringify({
+        "name": "",
+        "number": 0
+      })
+    })
+    .then(response => response.json() )
+    .then((data) => this.setState({remove: data.remove}) )
+    .catch(err => {
+      console.log(err);
+    });
+
+  }
+
+  render() {
+    return (
+      <div>
+        <h2>Removed</h2>
+        <p>{this.state.remove.name}</p>
+        <p>{this.postion.remove.number}</p>
+      </div>
+    );
+  }
 }
 
-export default RemoveContact;
+export default Remove;
