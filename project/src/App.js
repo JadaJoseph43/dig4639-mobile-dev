@@ -1,18 +1,26 @@
 import React from 'react';
-import Add from "./components/newContact/index.js";
-import Contacts from "./components/contacts/index.js";
-import Remove from "./components/remove/index.js";
-import Profile from "./components/profile/index.js";
-import './App.css';
+import Contacts from "./components/Contacts/index.js";
+import Profile from "./components/Profile/index.js";
 
-function App() {
-  return (
-    <div className="Contacts">
-    <Contacts/>
-    <Add/>
-  
-    </div>
-  );
+class App extends React.Component {
+
+  constructor(props) {
+    super(props);
+    this.state = {
+      removed: []
+    }
+  }
+
+  render() {
+    return (
+      <div>
+        <div>
+          <Profile />
+          <Contacts />
+        </div>
+      </div>
+    );
+  }
 }
 
 export default App;
